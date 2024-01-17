@@ -15,8 +15,8 @@
 		A5E8D2C92B57C52100F2E7BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E8D2C72B57C52100F2E7BD /* LaunchScreen.storyboard */; };
 		A5E8D2DE2B57C52200F2E7BD /* ExchangeRateCalcAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2DD2B57C52200F2E7BD /* ExchangeRateCalcAppUITests.swift */; };
 		A5E8D2E02B57C52200F2E7BD /* ExchangeRateCalcAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2DF2B57C52200F2E7BD /* ExchangeRateCalcAppUITestsLaunchTests.swift */; };
-		A5E8D2EE2B57CB9A00F2E7BD /* DecimalPointWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2ED2B57CB9A00F2E7BD /* DecimalPointWork.swift */; };
-		A5E8D2F32B57CC0B00F2E7BD /* DecimalPointWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2F22B57CC0B00F2E7BD /* DecimalPointWorkTests.swift */; };
+		A5E8D2EE2B57CB9A00F2E7BD /* NumberWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2ED2B57CB9A00F2E7BD /* NumberWork.swift */; };
+		A5E8D2F32B57CC0B00F2E7BD /* NumberWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2F22B57CC0B00F2E7BD /* NumberWorkTests.swift */; };
 		A5E8D2F52B57E42200F2E7BD /* DateWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2F42B57E42200F2E7BD /* DateWork.swift */; };
 		A5E8D2F72B57E46400F2E7BD /* DateWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2F62B57E46400F2E7BD /* DateWorkTests.swift */; };
 /* End PBXBuildFile section */
@@ -51,8 +51,8 @@
 		A5E8D2D92B57C52200F2E7BD /* ExchangeRateCalcAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeRateCalcAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E8D2DD2B57C52200F2E7BD /* ExchangeRateCalcAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalcAppUITests.swift; sourceTree = "<group>"; };
 		A5E8D2DF2B57C52200F2E7BD /* ExchangeRateCalcAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalcAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A5E8D2ED2B57CB9A00F2E7BD /* DecimalPointWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalPointWork.swift; sourceTree = "<group>"; };
-		A5E8D2F22B57CC0B00F2E7BD /* DecimalPointWorkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalPointWorkTests.swift; sourceTree = "<group>"; };
+		A5E8D2ED2B57CB9A00F2E7BD /* NumberWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberWork.swift; sourceTree = "<group>"; };
+		A5E8D2F22B57CC0B00F2E7BD /* NumberWorkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberWorkTests.swift; sourceTree = "<group>"; };
 		A5E8D2F42B57E42200F2E7BD /* DateWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateWork.swift; sourceTree = "<group>"; };
 		A5E8D2F62B57E46400F2E7BD /* DateWorkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateWorkTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,7 +137,7 @@
 		A5E8D2EC2B57CABE00F2E7BD /* CalculationWork */ = {
 			isa = PBXGroup;
 			children = (
-				A5E8D2ED2B57CB9A00F2E7BD /* DecimalPointWork.swift */,
+				A5E8D2ED2B57CB9A00F2E7BD /* NumberWork.swift */,
 				A5E8D2F42B57E42200F2E7BD /* DateWork.swift */,
 			);
 			path = CalculationWork;
@@ -146,7 +146,7 @@
 		A5E8D2EF2B57CBD100F2E7BD /* CalculationWorkTests */ = {
 			isa = PBXGroup;
 			children = (
-				A5E8D2F22B57CC0B00F2E7BD /* DecimalPointWorkTests.swift */,
+				A5E8D2F22B57CC0B00F2E7BD /* NumberWorkTests.swift */,
 				A5E8D2F62B57E46400F2E7BD /* DateWorkTests.swift */,
 			);
 			path = CalculationWorkTests;
@@ -285,7 +285,7 @@
 			files = (
 				A5E8D2F52B57E42200F2E7BD /* DateWork.swift in Sources */,
 				A5E8D2C12B57C51F00F2E7BD /* ViewController.swift in Sources */,
-				A5E8D2EE2B57CB9A00F2E7BD /* DecimalPointWork.swift in Sources */,
+				A5E8D2EE2B57CB9A00F2E7BD /* NumberWork.swift in Sources */,
 				A5E8D2BD2B57C51F00F2E7BD /* AppDelegate.swift in Sources */,
 				A5E8D2BF2B57C51F00F2E7BD /* SceneDelegate.swift in Sources */,
 			);
@@ -295,7 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5E8D2F32B57CC0B00F2E7BD /* DecimalPointWorkTests.swift in Sources */,
+				A5E8D2F32B57CC0B00F2E7BD /* NumberWorkTests.swift in Sources */,
 				A5E8D2F72B57E46400F2E7BD /* DateWorkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
