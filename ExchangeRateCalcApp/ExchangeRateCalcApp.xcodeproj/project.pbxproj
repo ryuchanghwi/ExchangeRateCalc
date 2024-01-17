@@ -17,6 +17,7 @@
 		A5E8D2DE2B57C52200F2E7BD /* ExchangeRateCalcAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2DD2B57C52200F2E7BD /* ExchangeRateCalcAppUITests.swift */; };
 		A5E8D2E02B57C52200F2E7BD /* ExchangeRateCalcAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2DF2B57C52200F2E7BD /* ExchangeRateCalcAppUITestsLaunchTests.swift */; };
 		A5E8D2EE2B57CB9A00F2E7BD /* DecimalPointWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2ED2B57CB9A00F2E7BD /* DecimalPointWork.swift */; };
+		A5E8D2F32B57CC0B00F2E7BD /* DecimalPointWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2F22B57CC0B00F2E7BD /* DecimalPointWorkTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		A5E8D2DD2B57C52200F2E7BD /* ExchangeRateCalcAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalcAppUITests.swift; sourceTree = "<group>"; };
 		A5E8D2DF2B57C52200F2E7BD /* ExchangeRateCalcAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalcAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A5E8D2ED2B57CB9A00F2E7BD /* DecimalPointWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalPointWork.swift; sourceTree = "<group>"; };
+		A5E8D2F22B57CC0B00F2E7BD /* DecimalPointWorkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalPointWorkTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		A5E8D2D22B57C52200F2E7BD /* ExchangeRateCalcAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				A5E8D2EF2B57CBD100F2E7BD /* CalculationWorkTests */,
 				A5E8D2D32B57C52200F2E7BD /* ExchangeRateCalcAppTests.swift */,
 			);
 			path = ExchangeRateCalcAppTests;
@@ -136,6 +139,14 @@
 				A5E8D2ED2B57CB9A00F2E7BD /* DecimalPointWork.swift */,
 			);
 			path = CalculationWork;
+			sourceTree = "<group>";
+		};
+		A5E8D2EF2B57CBD100F2E7BD /* CalculationWorkTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5E8D2F22B57CC0B00F2E7BD /* DecimalPointWorkTests.swift */,
+			);
+			path = CalculationWorkTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5E8D2D42B57C52200F2E7BD /* ExchangeRateCalcAppTests.swift in Sources */,
+				A5E8D2F32B57CC0B00F2E7BD /* DecimalPointWorkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
