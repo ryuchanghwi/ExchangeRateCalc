@@ -6,3 +6,30 @@
 //
 
 import Foundation
+
+enum DateConvertTypes {
+    case yyyyMMddHHmm
+    case yyyyMMdd
+    case MMdd
+}
+
+struct DateWork {
+    static func convertToString(_ date: Date, types: DateConvertTypes) -> String {
+        let dateFormatter = DateFormatter()
+        var returnValue = ""
+        switch types {
+        case .yyyyMMddHHmm:
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+            returnValue = dateFormatter.string(from: date)
+            return returnValue
+        case .yyyyMMdd:
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            returnValue = dateFormatter.string(from: date)
+            return returnValue
+        case .MMdd:
+            dateFormatter.dateFormat = "MM-dd"
+            returnValue = dateFormatter.string(from: date)
+            return returnValue
+        }
+    }
+}

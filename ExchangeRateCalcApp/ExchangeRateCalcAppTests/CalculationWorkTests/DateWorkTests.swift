@@ -6,30 +6,40 @@
 //
 
 import XCTest
+@testable import ExchangeRateCalcApp
 
 final class DateWorkTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test_데이트값이들어왔을때_yyyyMMddHHmm형식으로반환되는지확인() {
+        // Given
+        let expectedValue = "2022-01-17 15:30"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let value = dateFormatter.date(from: expectedValue)!
+        // When
+        let returnValue = DateWork.convertToString(value, types: .yyyyMMddHHmm)
+        // Then
+        XCTAssertEqual(expectedValue, returnValue)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func test_데이트값이들어왔을때_yyyyMMdd형식으로반환되는지확인() {
+        // Given
+        let expectedValue = "2022-01-17"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let value = dateFormatter.date(from: expectedValue)!
+        // When
+        let returnValue = DateWork.convertToString(value, types: .yyyyMMdd)
+        // Then
+        XCTAssertEqual(expectedValue, returnValue)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func test_데이트값이들어왔을때_MMdd형식으로반환되는지확인() {
+        // Given
+        let expectedValue = "01-17"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd"
+        let value = dateFormatter.date(from: expectedValue)!
+        // When
+        let returnValue = DateWork.convertToString(value, types: .MMdd)
+        // Then
+        XCTAssertEqual(expectedValue, returnValue)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
