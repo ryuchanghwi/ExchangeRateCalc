@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct DecimalPointWork {
+    static func truncateDecimal(_ value: Double, point: Int) -> Double {
+        let multiplier = pow(10.0, Double(point))
+        return Double(Int(value * multiplier)) / multiplier
+    }
+}

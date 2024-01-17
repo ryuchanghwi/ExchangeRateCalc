@@ -6,30 +6,25 @@
 //
 
 import XCTest
+@testable import ExchangeRateCalcApp
 
 final class DecimalPointWorkTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test_truncateDecimal_Double값이주어졌을때_두번째소수점에서자르는지확인() {
+        // Given
+        let value: Double = 123.123
+        let expectedValue = 123.12
+        // When
+        let returnValue = DecimalPointWork.truncateDecimal(value, point: 2)
+        // Then
+        XCTAssertEqual(returnValue, expectedValue)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    func test_truncateDecimal_소주가없는값이주어졌을때_소수두번째값까지0이이나오는지확인() {
+        // Given
+        let value:Double = 123
+        let expectedValue = 123.00
+        // When
+        let returnValue = DecimalPointWork.truncateDecimal(value, point: 2)
+        // Then
+        XCTAssertEqual(returnValue, expectedValue)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
