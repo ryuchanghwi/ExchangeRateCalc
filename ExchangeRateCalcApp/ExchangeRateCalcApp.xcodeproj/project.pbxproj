@@ -99,6 +99,7 @@
 		A5E8D2BB2B57C51F00F2E7BD /* ExchangeRateCalcApp */ = {
 			isa = PBXGroup;
 			children = (
+				A5E8D2EC2B57CABE00F2E7BD /* CalculationWork */,
 				A5E8D2BC2B57C51F00F2E7BD /* AppDelegate.swift */,
 				A5E8D2BE2B57C51F00F2E7BD /* SceneDelegate.swift */,
 				A5E8D2C02B57C51F00F2E7BD /* ViewController.swift */,
@@ -125,6 +126,13 @@
 				A5E8D2DF2B57C52200F2E7BD /* ExchangeRateCalcAppUITestsLaunchTests.swift */,
 			);
 			path = ExchangeRateCalcAppUITests;
+			sourceTree = "<group>";
+		};
+		A5E8D2EC2B57CABE00F2E7BD /* CalculationWork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CalculationWork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
