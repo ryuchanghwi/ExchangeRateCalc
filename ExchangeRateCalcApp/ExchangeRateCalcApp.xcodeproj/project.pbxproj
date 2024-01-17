@@ -13,11 +13,12 @@
 		A5E8D2C42B57C51F00F2E7BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E8D2C22B57C51F00F2E7BD /* Main.storyboard */; };
 		A5E8D2C62B57C52100F2E7BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5E8D2C52B57C52100F2E7BD /* Assets.xcassets */; };
 		A5E8D2C92B57C52100F2E7BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E8D2C72B57C52100F2E7BD /* LaunchScreen.storyboard */; };
-		A5E8D2D42B57C52200F2E7BD /* ExchangeRateCalcAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2D32B57C52200F2E7BD /* ExchangeRateCalcAppTests.swift */; };
 		A5E8D2DE2B57C52200F2E7BD /* ExchangeRateCalcAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2DD2B57C52200F2E7BD /* ExchangeRateCalcAppUITests.swift */; };
 		A5E8D2E02B57C52200F2E7BD /* ExchangeRateCalcAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2DF2B57C52200F2E7BD /* ExchangeRateCalcAppUITestsLaunchTests.swift */; };
 		A5E8D2EE2B57CB9A00F2E7BD /* DecimalPointWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2ED2B57CB9A00F2E7BD /* DecimalPointWork.swift */; };
 		A5E8D2F32B57CC0B00F2E7BD /* DecimalPointWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2F22B57CC0B00F2E7BD /* DecimalPointWorkTests.swift */; };
+		A5E8D2F52B57E42200F2E7BD /* DateWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2F42B57E42200F2E7BD /* DateWork.swift */; };
+		A5E8D2F72B57E46400F2E7BD /* DateWorkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2F62B57E46400F2E7BD /* DateWorkTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,12 +48,13 @@
 		A5E8D2C82B57C52100F2E7BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5E8D2CA2B57C52100F2E7BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5E8D2CF2B57C52200F2E7BD /* ExchangeRateCalcAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeRateCalcAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5E8D2D32B57C52200F2E7BD /* ExchangeRateCalcAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalcAppTests.swift; sourceTree = "<group>"; };
 		A5E8D2D92B57C52200F2E7BD /* ExchangeRateCalcAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeRateCalcAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E8D2DD2B57C52200F2E7BD /* ExchangeRateCalcAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalcAppUITests.swift; sourceTree = "<group>"; };
 		A5E8D2DF2B57C52200F2E7BD /* ExchangeRateCalcAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalcAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A5E8D2ED2B57CB9A00F2E7BD /* DecimalPointWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalPointWork.swift; sourceTree = "<group>"; };
 		A5E8D2F22B57CC0B00F2E7BD /* DecimalPointWorkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalPointWorkTests.swift; sourceTree = "<group>"; };
+		A5E8D2F42B57E42200F2E7BD /* DateWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateWork.swift; sourceTree = "<group>"; };
+		A5E8D2F62B57E46400F2E7BD /* DateWorkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateWorkTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				A5E8D2EF2B57CBD100F2E7BD /* CalculationWorkTests */,
-				A5E8D2D32B57C52200F2E7BD /* ExchangeRateCalcAppTests.swift */,
 			);
 			path = ExchangeRateCalcAppTests;
 			sourceTree = "<group>";
@@ -137,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				A5E8D2ED2B57CB9A00F2E7BD /* DecimalPointWork.swift */,
+				A5E8D2F42B57E42200F2E7BD /* DateWork.swift */,
 			);
 			path = CalculationWork;
 			sourceTree = "<group>";
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				A5E8D2F22B57CC0B00F2E7BD /* DecimalPointWorkTests.swift */,
+				A5E8D2F62B57E46400F2E7BD /* DateWorkTests.swift */,
 			);
 			path = CalculationWorkTests;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5E8D2F52B57E42200F2E7BD /* DateWork.swift in Sources */,
 				A5E8D2C12B57C51F00F2E7BD /* ViewController.swift in Sources */,
 				A5E8D2EE2B57CB9A00F2E7BD /* DecimalPointWork.swift in Sources */,
 				A5E8D2BD2B57C51F00F2E7BD /* AppDelegate.swift in Sources */,
@@ -291,8 +295,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5E8D2D42B57C52200F2E7BD /* ExchangeRateCalcAppTests.swift in Sources */,
 				A5E8D2F32B57CC0B00F2E7BD /* DecimalPointWorkTests.swift in Sources */,
+				A5E8D2F72B57E46400F2E7BD /* DateWorkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
