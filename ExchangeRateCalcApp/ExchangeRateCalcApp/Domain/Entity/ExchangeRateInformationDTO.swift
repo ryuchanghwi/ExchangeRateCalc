@@ -6,3 +6,24 @@
 //
 
 import Foundation
+
+struct ExchangeRateInformationDTO: Decodable {
+    let succes: Bool?
+    let terms: String?
+    let privacy: String?
+    let timestamp: Int?
+    let source: String?
+    let quotes: Quotes
+}
+
+struct Quotes: Decodable {
+    let koreaExChangeRate: Double?
+    let japenExChangeRate: Double?
+    let philippinesChangeRate: Double?
+    
+    enum CodingKeys: String, CodingKey {
+        case koreaExChangeRate = "USDKRW"
+        case japenExChangeRate = "USDJPY"
+        case philippinesChangeRate = "USDPHP"
+    }
+}
