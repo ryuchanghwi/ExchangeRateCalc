@@ -130,6 +130,13 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		A59A9DE82B594DC80035ADE5 /* UseCaseTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCaseTests;
+			sourceTree = "<group>";
+		};
 		A5E8D2B02B57C51F00F2E7BD = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +174,7 @@
 		A5E8D2D22B57C52200F2E7BD /* ExchangeRateCalcAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				A59A9DE82B594DC80035ADE5 /* UseCaseTests */,
 				A5E8D2EF2B57CBD100F2E7BD /* CalculationWorkTests */,
 			);
 			path = ExchangeRateCalcAppTests;
