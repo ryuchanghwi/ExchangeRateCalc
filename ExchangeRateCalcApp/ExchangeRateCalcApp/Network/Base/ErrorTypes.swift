@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+enum ErrorTypes: Error {
+    case decoingError
+    case invalidURL
+    case noData
+}
