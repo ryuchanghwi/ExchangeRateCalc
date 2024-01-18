@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		A5E8D2BD2B57C51F00F2E7BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2BC2B57C51F00F2E7BD /* AppDelegate.swift */; };
 		A5E8D2BF2B57C51F00F2E7BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2BE2B57C51F00F2E7BD /* SceneDelegate.swift */; };
-		A5E8D2C12B57C51F00F2E7BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2C02B57C51F00F2E7BD /* ViewController.swift */; };
-		A5E8D2C42B57C51F00F2E7BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E8D2C22B57C51F00F2E7BD /* Main.storyboard */; };
+		A5E8D2C12B57C51F00F2E7BD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2C02B57C51F00F2E7BD /* MainViewController.swift */; };
 		A5E8D2C62B57C52100F2E7BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5E8D2C52B57C52100F2E7BD /* Assets.xcassets */; };
 		A5E8D2C92B57C52100F2E7BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5E8D2C72B57C52100F2E7BD /* LaunchScreen.storyboard */; };
 		A5E8D2DE2B57C52200F2E7BD /* ExchangeRateCalcAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2DD2B57C52200F2E7BD /* ExchangeRateCalcAppUITests.swift */; };
@@ -42,11 +41,10 @@
 		A5E8D2B92B57C51F00F2E7BD /* ExchangeRateCalcApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRateCalcApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E8D2BC2B57C51F00F2E7BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5E8D2BE2B57C51F00F2E7BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A5E8D2C02B57C51F00F2E7BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A5E8D2C32B57C51F00F2E7BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A5E8D2C02B57C51F00F2E7BD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A5E8D2C52B57C52100F2E7BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5E8D2C82B57C52100F2E7BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A5E8D2CA2B57C52100F2E7BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5E8D2CA2B57C52100F2E7BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ExchangeRateCalcApp/Resource/Info.plist; sourceTree = SOURCE_ROOT; };
 		A5E8D2CF2B57C52200F2E7BD /* ExchangeRateCalcAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeRateCalcAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E8D2D92B57C52200F2E7BD /* ExchangeRateCalcAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExchangeRateCalcAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E8D2DD2B57C52200F2E7BD /* ExchangeRateCalcAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCalcAppUITests.swift; sourceTree = "<group>"; };
@@ -105,14 +103,13 @@
 		A5E8D2BB2B57C51F00F2E7BD /* ExchangeRateCalcApp */ = {
 			isa = PBXGroup;
 			children = (
+				A5E8D2FD2B591E8400F2E7BD /* Source */,
+				A5E8D2FC2B591D2000F2E7BD /* Resource */,
+				A5E8D2FB2B591CFA00F2E7BD /* Network */,
+				A5E8D2FA2B591CD600F2E7BD /* Data */,
+				A5E8D2F92B591CD000F2E7BD /* Domain */,
+				A5E8D2F82B591CC500F2E7BD /* Presentation */,
 				A5E8D2EC2B57CABE00F2E7BD /* CalculationWork */,
-				A5E8D2BC2B57C51F00F2E7BD /* AppDelegate.swift */,
-				A5E8D2BE2B57C51F00F2E7BD /* SceneDelegate.swift */,
-				A5E8D2C02B57C51F00F2E7BD /* ViewController.swift */,
-				A5E8D2C22B57C51F00F2E7BD /* Main.storyboard */,
-				A5E8D2C52B57C52100F2E7BD /* Assets.xcassets */,
-				A5E8D2C72B57C52100F2E7BD /* LaunchScreen.storyboard */,
-				A5E8D2CA2B57C52100F2E7BD /* Info.plist */,
 			);
 			path = ExchangeRateCalcApp;
 			sourceTree = "<group>";
@@ -150,6 +147,86 @@
 				A5E8D2F62B57E46400F2E7BD /* DateWorkTests.swift */,
 			);
 			path = CalculationWorkTests;
+			sourceTree = "<group>";
+		};
+		A5E8D2F82B591CC500F2E7BD /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A5E8D2FF2B591EEB00F2E7BD /* Main */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A5E8D2F92B591CD000F2E7BD /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A5E8D2FA2B591CD600F2E7BD /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A5E8D2FB2B591CFA00F2E7BD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A5E8D2FC2B591D2000F2E7BD /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A5E8D2C72B57C52100F2E7BD /* LaunchScreen.storyboard */,
+				A5E8D2CA2B57C52100F2E7BD /* Info.plist */,
+				A5E8D2C52B57C52100F2E7BD /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		A5E8D2FD2B591E8400F2E7BD /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A5E8D2FE2B591EAA00F2E7BD /* Supports */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		A5E8D2FE2B591EAA00F2E7BD /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				A5E8D2BC2B57C51F00F2E7BD /* AppDelegate.swift */,
+				A5E8D2BE2B57C51F00F2E7BD /* SceneDelegate.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		A5E8D2FF2B591EEB00F2E7BD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A5E8D3002B591EFA00F2E7BD /* ViewController */,
+				A5E8D3012B591F0B00F2E7BD /* ViewModel */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A5E8D3002B591EFA00F2E7BD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A5E8D2C02B57C51F00F2E7BD /* MainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A5E8D3012B591F0B00F2E7BD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +335,6 @@
 			files = (
 				A5E8D2C92B57C52100F2E7BD /* LaunchScreen.storyboard in Resources */,
 				A5E8D2C62B57C52100F2E7BD /* Assets.xcassets in Resources */,
-				A5E8D2C42B57C51F00F2E7BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5E8D2F52B57E42200F2E7BD /* DateWork.swift in Sources */,
-				A5E8D2C12B57C51F00F2E7BD /* ViewController.swift in Sources */,
+				A5E8D2C12B57C51F00F2E7BD /* MainViewController.swift in Sources */,
 				A5E8D2EE2B57CB9A00F2E7BD /* NumberWork.swift in Sources */,
 				A5E8D2BD2B57C51F00F2E7BD /* AppDelegate.swift in Sources */,
 				A5E8D2BF2B57C51F00F2E7BD /* SceneDelegate.swift in Sources */,
@@ -325,14 +401,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A5E8D2C22B57C51F00F2E7BD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A5E8D2C32B57C51F00F2E7BD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A5E8D2C72B57C52100F2E7BD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -396,7 +464,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -453,7 +521,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -472,12 +540,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JB8T59WMFR;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ExchangeRateCalcApp/Info.plist;
+				INFOPLIST_FILE = ExchangeRateCalcApp/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,9 +552,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = project.ExchangeRateCalcApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -500,12 +570,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JB8T59WMFR;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ExchangeRateCalcApp/Info.plist;
+				INFOPLIST_FILE = ExchangeRateCalcApp/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -513,9 +582,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = project.ExchangeRateCalcApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
