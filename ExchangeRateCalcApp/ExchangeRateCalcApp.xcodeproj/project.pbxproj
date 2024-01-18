@@ -120,6 +120,13 @@
 			path = RepositoryInterface;
 			sourceTree = "<group>";
 		};
+		A59A9DE52B594CF00035ADE5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		A5E8D2B02B57C51F00F2E7BD = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +242,7 @@
 		A5E8D2FD2B591E8400F2E7BD /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				A59A9DE52B594CF00035ADE5 /* Constants */,
 				A5E8D2FE2B591EAA00F2E7BD /* Supports */,
 			);
 			path = Source;
