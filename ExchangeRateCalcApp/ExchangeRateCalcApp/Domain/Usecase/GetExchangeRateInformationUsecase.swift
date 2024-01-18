@@ -6,3 +6,18 @@
 //
 
 import Foundation
+import Combine
+
+protocol GetExchangeRateInformationUsecaseProcotol {
+    func execute() -> AnyPublisher<ExchangeRateInformationDTO, ErrorTypes>
+}
+
+struct GetExchangeRateInformationUsecase: GetExchangeRateInformationUsecaseProcotol {
+    private let exchangeRateInformationRepository: ExchangeRateinformationRepositoryInterface
+    init(exchangeRateInformationRepository: ExchangeRateinformationRepositoryInterface) {
+        self.exchangeRateInformationRepository = exchangeRateInformationRepository
+    }
+    func execute() -> AnyPublisher<ExchangeRateInformationDTO, ErrorTypes> {
+        return self.exchangeRateInformationRepository.data()
+    }
+}
