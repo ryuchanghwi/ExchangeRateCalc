@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import Combine
+
+protocol ExchangeRateinformationRepositoryInterface {
+    func data() -> AnyPublisher<ExchangeRateInformationDTO, ErrorTypes>
+}
