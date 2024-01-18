@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A59A9DD22B592C030035ADE5 /* ExchangeRateInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9DD12B592C030035ADE5 /* ExchangeRateInformationDTO.swift */; };
 		A59A9DD52B593EA50035ADE5 /* GetExchangeRateInformationUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9DD42B593EA50035ADE5 /* GetExchangeRateInformationUsecase.swift */; };
+		A59A9DD82B593F8A0035ADE5 /* ErrorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9DD72B593F8A0035ADE5 /* ErrorTypes.swift */; };
 		A5E8D2BD2B57C51F00F2E7BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2BC2B57C51F00F2E7BD /* AppDelegate.swift */; };
 		A5E8D2BF2B57C51F00F2E7BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2BE2B57C51F00F2E7BD /* SceneDelegate.swift */; };
 		A5E8D2C12B57C51F00F2E7BD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2C02B57C51F00F2E7BD /* MainViewController.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		A59A9DD12B592C030035ADE5 /* ExchangeRateInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateInformationDTO.swift; sourceTree = "<group>"; };
 		A59A9DD42B593EA50035ADE5 /* GetExchangeRateInformationUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExchangeRateInformationUsecase.swift; sourceTree = "<group>"; };
+		A59A9DD72B593F8A0035ADE5 /* ErrorTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTypes.swift; sourceTree = "<group>"; };
 		A5E8D2B92B57C51F00F2E7BD /* ExchangeRateCalcApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRateCalcApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E8D2BC2B57C51F00F2E7BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5E8D2BE2B57C51F00F2E7BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		A59A9DD62B593F4B0035ADE5 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				A59A9DD72B593F8A0035ADE5 /* ErrorTypes.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 			files = (
 				A59A9DD22B592C030035ADE5 /* ExchangeRateInformationDTO.swift in Sources */,
 				A59A9DD52B593EA50035ADE5 /* GetExchangeRateInformationUsecase.swift in Sources */,
+				A59A9DD82B593F8A0035ADE5 /* ErrorTypes.swift in Sources */,
 				A5E8D2F52B57E42200F2E7BD /* DateWork.swift in Sources */,
 				A5E8D2C12B57C51F00F2E7BD /* MainViewController.swift in Sources */,
 				A5E8D2EE2B57CB9A00F2E7BD /* NumberWork.swift in Sources */,
