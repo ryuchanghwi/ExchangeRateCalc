@@ -80,6 +80,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A59A9DD02B592BD40035ADE5 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		A5E8D2B02B57C51F00F2E7BD = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +167,7 @@
 		A5E8D2F92B591CD000F2E7BD /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				A59A9DD02B592BD40035ADE5 /* Entity */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
