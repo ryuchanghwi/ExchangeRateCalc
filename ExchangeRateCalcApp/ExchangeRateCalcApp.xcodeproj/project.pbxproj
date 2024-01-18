@@ -100,6 +100,13 @@
 			path = Usecase;
 			sourceTree = "<group>";
 		};
+		A59A9DD62B593F4B0035ADE5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		A5E8D2B02B57C51F00F2E7BD = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +203,7 @@
 		A5E8D2FB2B591CFA00F2E7BD /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A59A9DD62B593F4B0035ADE5 /* Base */,
 			);
 			path = Network;
 			sourceTree = "<group>";
