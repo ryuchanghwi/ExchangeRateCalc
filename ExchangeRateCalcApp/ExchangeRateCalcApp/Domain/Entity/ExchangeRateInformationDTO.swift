@@ -8,7 +8,7 @@
 import Foundation
 
 struct ExchangeRateInformationDTO: Decodable {
-    let succes: Bool?
+    let success: Bool?
     let terms: String?
     let privacy: String?
     let timestamp: Int?
