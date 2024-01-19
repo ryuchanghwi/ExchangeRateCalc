@@ -17,9 +17,9 @@ struct ExchangeRateInformationConstants {
     "timestamp": 1705572303,
     "source": "USD",
     "quotes": {
-        "USDKRW": 3.67288,
-        "USDJPY": 72.820546,
-        "USDPHP": 95.306269
+        "USDKRW": 320.489701,
+        "USDJPY": 147.811026,
+        "USDPHP": 55.828506
 }
 
 """
