@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A59A9DD22B592C030035ADE5 /* ExchangeRateInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9DD12B592C030035ADE5 /* ExchangeRateInformationDTO.swift */; };
+		A59A9DD52B593EA50035ADE5 /* GetExchangeRateInformationUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9DD42B593EA50035ADE5 /* GetExchangeRateInformationUsecase.swift */; };
+		A59A9DD82B593F8A0035ADE5 /* ErrorTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9DD72B593F8A0035ADE5 /* ErrorTypes.swift */; };
+		A59A9DDB2B5940E00035ADE5 /* ExchangeRateinformationRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9DDA2B5940E00035ADE5 /* ExchangeRateinformationRepositoryInterface.swift */; };
+		A59A9DE72B594D290035ADE5 /* ExchangeRateInformationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9DE62B594D290035ADE5 /* ExchangeRateInformationConstants.swift */; };
+		A59A9DEA2B594EEB0035ADE5 /* GetExchangeRateInformationUsecaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9DE92B594EEB0035ADE5 /* GetExchangeRateInformationUsecaseTests.swift */; };
 		A5E8D2BD2B57C51F00F2E7BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2BC2B57C51F00F2E7BD /* AppDelegate.swift */; };
 		A5E8D2BF2B57C51F00F2E7BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2BE2B57C51F00F2E7BD /* SceneDelegate.swift */; };
 		A5E8D2C12B57C51F00F2E7BD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2C02B57C51F00F2E7BD /* MainViewController.swift */; };
@@ -40,6 +45,11 @@
 
 /* Begin PBXFileReference section */
 		A59A9DD12B592C030035ADE5 /* ExchangeRateInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateInformationDTO.swift; sourceTree = "<group>"; };
+		A59A9DD42B593EA50035ADE5 /* GetExchangeRateInformationUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExchangeRateInformationUsecase.swift; sourceTree = "<group>"; };
+		A59A9DD72B593F8A0035ADE5 /* ErrorTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTypes.swift; sourceTree = "<group>"; };
+		A59A9DDA2B5940E00035ADE5 /* ExchangeRateinformationRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateinformationRepositoryInterface.swift; sourceTree = "<group>"; };
+		A59A9DE62B594D290035ADE5 /* ExchangeRateInformationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateInformationConstants.swift; sourceTree = "<group>"; };
+		A59A9DE92B594EEB0035ADE5 /* GetExchangeRateInformationUsecaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetExchangeRateInformationUsecaseTests.swift; sourceTree = "<group>"; };
 		A5E8D2B92B57C51F00F2E7BD /* ExchangeRateCalcApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRateCalcApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E8D2BC2B57C51F00F2E7BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5E8D2BE2B57C51F00F2E7BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +100,46 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		A59A9DD32B593E660035ADE5 /* Usecase */ = {
+			isa = PBXGroup;
+			children = (
+				A59A9DD42B593EA50035ADE5 /* GetExchangeRateInformationUsecase.swift */,
+			);
+			path = Usecase;
+			sourceTree = "<group>";
+		};
+		A59A9DD62B593F4B0035ADE5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A59A9DD72B593F8A0035ADE5 /* ErrorTypes.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A59A9DD92B59408D0035ADE5 /* RepositoryInterface */ = {
+			isa = PBXGroup;
+			children = (
+				A59A9DDA2B5940E00035ADE5 /* ExchangeRateinformationRepositoryInterface.swift */,
+			);
+			path = RepositoryInterface;
+			sourceTree = "<group>";
+		};
+		A59A9DE52B594CF00035ADE5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A59A9DE62B594D290035ADE5 /* ExchangeRateInformationConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A59A9DE82B594DC80035ADE5 /* UseCaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				A59A9DE92B594EEB0035ADE5 /* GetExchangeRateInformationUsecaseTests.swift */,
+			);
+			path = UseCaseTests;
+			sourceTree = "<group>";
+		};
 		A5E8D2B02B57C51F00F2E7BD = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +177,7 @@
 		A5E8D2D22B57C52200F2E7BD /* ExchangeRateCalcAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				A59A9DE82B594DC80035ADE5 /* UseCaseTests */,
 				A5E8D2EF2B57CBD100F2E7BD /* CalculationWorkTests */,
 			);
 			path = ExchangeRateCalcAppTests;
@@ -170,6 +221,8 @@
 		A5E8D2F92B591CD000F2E7BD /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				A59A9DD92B59408D0035ADE5 /* RepositoryInterface */,
+				A59A9DD32B593E660035ADE5 /* Usecase */,
 				A59A9DD02B592BD40035ADE5 /* Entity */,
 			);
 			path = Domain;
@@ -185,6 +238,7 @@
 		A5E8D2FB2B591CFA00F2E7BD /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A59A9DD62B593F4B0035ADE5 /* Base */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -202,6 +256,7 @@
 		A5E8D2FD2B591E8400F2E7BD /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				A59A9DE52B594CF00035ADE5 /* Constants */,
 				A5E8D2FE2B591EAA00F2E7BD /* Supports */,
 			);
 			path = Source;
@@ -370,10 +425,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A59A9DDB2B5940E00035ADE5 /* ExchangeRateinformationRepositoryInterface.swift in Sources */,
 				A59A9DD22B592C030035ADE5 /* ExchangeRateInformationDTO.swift in Sources */,
+				A59A9DD52B593EA50035ADE5 /* GetExchangeRateInformationUsecase.swift in Sources */,
+				A59A9DD82B593F8A0035ADE5 /* ErrorTypes.swift in Sources */,
 				A5E8D2F52B57E42200F2E7BD /* DateWork.swift in Sources */,
 				A5E8D2C12B57C51F00F2E7BD /* MainViewController.swift in Sources */,
 				A5E8D2EE2B57CB9A00F2E7BD /* NumberWork.swift in Sources */,
+				A59A9DE72B594D290035ADE5 /* ExchangeRateInformationConstants.swift in Sources */,
 				A5E8D2BD2B57C51F00F2E7BD /* AppDelegate.swift in Sources */,
 				A5E8D2BF2B57C51F00F2E7BD /* SceneDelegate.swift in Sources */,
 			);
@@ -384,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5E8D2F32B57CC0B00F2E7BD /* NumberWorkTests.swift in Sources */,
+				A59A9DEA2B594EEB0035ADE5 /* GetExchangeRateInformationUsecaseTests.swift in Sources */,
 				A5E8D2F72B57E46400F2E7BD /* DateWorkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
