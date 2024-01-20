@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import Combine
 
 class MainViewController: UIViewController {
     // MARK: - Property
+    private let viewModel = MainViewModel(getExchangeRateInformationUsecase: GetExchangeRateInformationUsecase(exchangeRateInformationRepository: ExchangeRateinformationRepository(service: GetService.shared)))
+    private var  cancellables: Set<AnyCancellable> = []
     private let nationArray = ["한국(KRW)", "일본(JPY)", "필리핀(PHP)"]
     // MARK: - UI Property
     private let titleLabel: UILabel = {
@@ -136,9 +139,50 @@ class MainViewController: UIViewController {
         setLayout()
         setConfig()
         setDelegate()
+        viewModel.getData()
+        viewModel.combineData()
+        setBinding()
     }
-
-    
+    // MARK: - Bind
+    private func setBinding() {
+        viewModel.$exchangeRateInformationData
+            .receive(on: RunLoop.main)
+            .sink { [weak self] data in
+                guard let self = self else { return }
+                self.viewTimeTitleLabel.text = data?.viewTime
+                self.exchangeRateTitleLabel.text = data?.exchangeRate
+                self.resultLabel.text = data?.result
+            }
+            .store(in: &cancellables)
+        viewModel.$receptionCountry
+            .receive(on: RunLoop.main)
+            .sink { [weak self] data in
+                guard let self = self else { return }
+                self.receptionCountryTitleLabel.text = data
+            }
+            .store(in: &cancellables)
+        viewModel.$outputAmount
+            .receive(on: RunLoop.main)
+            .sink { [weak self] data in
+                guard let self = self else { return }
+                self.resultLabel.text = data
+            }
+            .store(in: &cancellables)
+        viewModel.$exchnageRate
+            .receive(on: RunLoop.main)
+            .sink { [weak self] data in
+                guard let self = self else { return }
+                self.exchangeRateTitleLabel.text = data
+            }
+            .store(in: &cancellables)
+        self.transferTitleAmountTextField.addTarget(self, action: #selector(self.textFieldDidChange), for: .editingChanged)
+    }
+    @objc func textFieldDidChange() {
+        viewModel.inputTransferAmount(amount: transferTitleAmountTextField.text ?? "")
+    }
+    private func setBind(data: ExchangeRateInformationDTO) {
+        print(data, "????????")
+    }
 }
 // MARK: - Extensions
 extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -153,6 +197,18 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 70
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch row {
+        case 0:
+            viewModel.changeCountry(country: .korea)
+        case 1:
+            viewModel.changeCountry(country: .japen)
+        case 2:
+            viewModel.changeCountry(country: .philippines)
+        default:
+            print("default")
+        }
     }
 }
 extension MainViewController: UITextFieldDelegate {
