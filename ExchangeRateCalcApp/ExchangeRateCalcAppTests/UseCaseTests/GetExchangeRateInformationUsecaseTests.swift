@@ -16,7 +16,7 @@ struct MockExchangeRateinformationRepository: ExchangeRateinformationRepositoryI
     }
     func data() -> AnyPublisher<ExchangeRateInformationDTO, ErrorTypes> {
         if hasError {
-            return Fail(error: ErrorTypes.noData)
+            return Fail(error: ErrorTypes.decoingError)
                 .eraseToAnyPublisher()
         } else {
             let exchangeRateData = ExchangeRateInformationConstants.dummyData
@@ -65,7 +65,7 @@ final class GetExchangeRateInformationUsecaseTests: XCTestCase {
     func test_usecase_에러상황이주어졌을때_에러를출력되는지확인() {
         // Given
         sut = GetExchangeRateInformationUsecase(exchangeRateInformationRepository: MockExchangeRateinformationRepository(hasError: true))
-        let expectationValue: ErrorTypes = .noData
+        let expectationValue: ErrorTypes = .decoingError
         let expectation = self.expectation(description: "noData 에러 발생")
         // When
         var returnValue: ErrorTypes?

@@ -24,9 +24,13 @@ struct Session: Requestable {
 }
 struct MockSession: Requestable {
     func request<T>(from url: String) -> AnyPublisher<T, ErrorTypes> where T : Decodable {
-        return Just(ExchangeRateInformationConstants.dummyData as! T)
-            .setFailureType(to: ErrorTypes.self)
-            .eraseToAnyPublisher()
+        let jsonString = ExchangeRateInformationConstants.jsonString.data(using: .utf8)
+        do {
+            let decodedData = try! JSONDecoder().decode(T.self, from: jsonString!)
+            return Just(decodedData)
+                .setFailureType(to: ErrorTypes.self)
+                .eraseToAnyPublisher()
+        }
     }
 }
 struct MockFailSession: Requestable {
