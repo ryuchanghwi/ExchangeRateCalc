@@ -11,5 +11,5 @@ import Combine
  방식 참고 - https://hoonha.tistory.com/7
  */
 protocol Requestable {
-    func getService<T: Decodable>(from url: String) -> AnyPublisher<T, ErrorTypes>
+    func request<T: Decodable>(from url: String) -> AnyPublisher<T, ErrorTypes>
 }

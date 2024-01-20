@@ -18,6 +18,7 @@
 		A59A9DF52B5A4F740035ADE5 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9DF42B5A4F740035ADE5 /* Secrets.swift */; };
 		A59A9DF72B5A5D690035ADE5 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9DF62B5A5D690035ADE5 /* MockURLProtocol.swift */; };
 		A59A9E082B5B91CB0035ADE5 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9E072B5B91CB0035ADE5 /* Requestable.swift */; };
+		A59A9E0C2B5BA3300035ADE5 /* ExchangeRateInformationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9E0B2B5BA3300035ADE5 /* ExchangeRateInformationSession.swift */; };
 		A5E8D2BD2B57C51F00F2E7BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2BC2B57C51F00F2E7BD /* AppDelegate.swift */; };
 		A5E8D2BF2B57C51F00F2E7BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2BE2B57C51F00F2E7BD /* SceneDelegate.swift */; };
 		A5E8D2C12B57C51F00F2E7BD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2C02B57C51F00F2E7BD /* MainViewController.swift */; };
@@ -60,6 +61,7 @@
 		A59A9DF42B5A4F740035ADE5 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		A59A9DF62B5A5D690035ADE5 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		A59A9E072B5B91CB0035ADE5 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		A59A9E0B2B5BA3300035ADE5 /* ExchangeRateInformationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateInformationSession.swift; sourceTree = "<group>"; };
 		A5E8D2B92B57C51F00F2E7BD /* ExchangeRateCalcApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRateCalcApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E8D2BC2B57C51F00F2E7BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5E8D2BE2B57C51F00F2E7BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,11 +184,12 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
-		A59A9E092B5B92240035ADE5 /* Mock */ = {
+		A59A9E092B5B92240035ADE5 /* Session */ = {
 			isa = PBXGroup;
 			children = (
+				A59A9E0B2B5BA3300035ADE5 /* ExchangeRateInformationSession.swift */,
 			);
-			path = Mock;
+			path = Session;
 			sourceTree = "<group>";
 		};
 		A5E8D2B02B57C51F00F2E7BD = {
@@ -288,7 +291,7 @@
 		A5E8D2FB2B591CFA00F2E7BD /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				A59A9E092B5B92240035ADE5 /* Mock */,
+				A59A9E092B5B92240035ADE5 /* Session */,
 				A59A9E062B5B91870035ADE5 /* Protocol */,
 				A59A9DEB2B5A40190035ADE5 /* Service */,
 				A59A9DD62B593F4B0035ADE5 /* Base */,
@@ -495,6 +498,7 @@
 				A5E8D2BD2B57C51F00F2E7BD /* AppDelegate.swift in Sources */,
 				A5E8D2BF2B57C51F00F2E7BD /* SceneDelegate.swift in Sources */,
 				A59A9DED2B5A403F0035ADE5 /* GetService.swift in Sources */,
+				A59A9E0C2B5BA3300035ADE5 /* ExchangeRateInformationSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
