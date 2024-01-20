@@ -19,6 +19,7 @@
 		A59A9E082B5B91CB0035ADE5 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9E072B5B91CB0035ADE5 /* Requestable.swift */; };
 		A59A9E0C2B5BA3300035ADE5 /* ExchangeRateInformationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9E0B2B5BA3300035ADE5 /* ExchangeRateInformationSession.swift */; };
 		A59A9E0E2B5BA49A0035ADE5 /* ExchangeRateInformationGetServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9E0D2B5BA49A0035ADE5 /* ExchangeRateInformationGetServiceTests.swift */; };
+		A59A9E112B5BB8540035ADE5 /* ExchangeRateinformationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9E102B5BB8540035ADE5 /* ExchangeRateinformationRepository.swift */; };
 		A5E8D2BD2B57C51F00F2E7BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2BC2B57C51F00F2E7BD /* AppDelegate.swift */; };
 		A5E8D2BF2B57C51F00F2E7BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2BE2B57C51F00F2E7BD /* SceneDelegate.swift */; };
 		A5E8D2C12B57C51F00F2E7BD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2C02B57C51F00F2E7BD /* MainViewController.swift */; };
@@ -62,6 +63,7 @@
 		A59A9E072B5B91CB0035ADE5 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		A59A9E0B2B5BA3300035ADE5 /* ExchangeRateInformationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateInformationSession.swift; sourceTree = "<group>"; };
 		A59A9E0D2B5BA49A0035ADE5 /* ExchangeRateInformationGetServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateInformationGetServiceTests.swift; sourceTree = "<group>"; };
+		A59A9E102B5BB8540035ADE5 /* ExchangeRateinformationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateinformationRepository.swift; sourceTree = "<group>"; };
 		A5E8D2B92B57C51F00F2E7BD /* ExchangeRateCalcApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRateCalcApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E8D2BC2B57C51F00F2E7BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5E8D2BE2B57C51F00F2E7BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 		A59A9E0F2B5BB8260035ADE5 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				A59A9E102B5BB8540035ADE5 /* ExchangeRateinformationRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				A59A9DF52B5A4F740035ADE5 /* Secrets.swift in Sources */,
 				A59A9DD22B592C030035ADE5 /* ExchangeRateInformationDTO.swift in Sources */,
 				A59A9DD52B593EA50035ADE5 /* GetExchangeRateInformationUsecase.swift in Sources */,
+				A59A9E112B5BB8540035ADE5 /* ExchangeRateinformationRepository.swift in Sources */,
 				A59A9DD82B593F8A0035ADE5 /* ErrorTypes.swift in Sources */,
 				A5E8D2F52B57E42200F2E7BD /* DateWork.swift in Sources */,
 				A5E8D2C12B57C51F00F2E7BD /* MainViewController.swift in Sources */,
