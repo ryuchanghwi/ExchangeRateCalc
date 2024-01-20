@@ -20,6 +20,7 @@
 		A59A9E0C2B5BA3300035ADE5 /* ExchangeRateInformationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9E0B2B5BA3300035ADE5 /* ExchangeRateInformationSession.swift */; };
 		A59A9E0E2B5BA49A0035ADE5 /* ExchangeRateInformationGetServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9E0D2B5BA49A0035ADE5 /* ExchangeRateInformationGetServiceTests.swift */; };
 		A59A9E112B5BB8540035ADE5 /* ExchangeRateinformationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9E102B5BB8540035ADE5 /* ExchangeRateinformationRepository.swift */; };
+		A59A9E142B5BBC1A0035ADE5 /* ExchangeRateinformationRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9E132B5BBC1A0035ADE5 /* ExchangeRateinformationRepositoryTests.swift */; };
 		A5E8D2BD2B57C51F00F2E7BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2BC2B57C51F00F2E7BD /* AppDelegate.swift */; };
 		A5E8D2BF2B57C51F00F2E7BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2BE2B57C51F00F2E7BD /* SceneDelegate.swift */; };
 		A5E8D2C12B57C51F00F2E7BD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2C02B57C51F00F2E7BD /* MainViewController.swift */; };
@@ -64,6 +65,7 @@
 		A59A9E0B2B5BA3300035ADE5 /* ExchangeRateInformationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateInformationSession.swift; sourceTree = "<group>"; };
 		A59A9E0D2B5BA49A0035ADE5 /* ExchangeRateInformationGetServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateInformationGetServiceTests.swift; sourceTree = "<group>"; };
 		A59A9E102B5BB8540035ADE5 /* ExchangeRateinformationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateinformationRepository.swift; sourceTree = "<group>"; };
+		A59A9E132B5BBC1A0035ADE5 /* ExchangeRateinformationRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateinformationRepositoryTests.swift; sourceTree = "<group>"; };
 		A5E8D2B92B57C51F00F2E7BD /* ExchangeRateCalcApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRateCalcApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E8D2BC2B57C51F00F2E7BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5E8D2BE2B57C51F00F2E7BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +204,14 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		A59A9E122B5BBC040035ADE5 /* RepositoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				A59A9E132B5BBC1A0035ADE5 /* ExchangeRateinformationRepositoryTests.swift */,
+			);
+			path = RepositoryTests;
+			sourceTree = "<group>";
+		};
 		A5E8D2B02B57C51F00F2E7BD = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				A59A9DF82B5A60160035ADE5 /* NetworkTests */,
+				A59A9E122B5BBC040035ADE5 /* RepositoryTests */,
 				A59A9DE82B594DC80035ADE5 /* UseCaseTests */,
 				A5E8D2EF2B57CBD100F2E7BD /* CalculationWorkTests */,
 			);
@@ -518,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A59A9E0E2B5BA49A0035ADE5 /* ExchangeRateInformationGetServiceTests.swift in Sources */,
+				A59A9E142B5BBC1A0035ADE5 /* ExchangeRateinformationRepositoryTests.swift in Sources */,
 				A5E8D2F32B57CC0B00F2E7BD /* NumberWorkTests.swift in Sources */,
 				A59A9DEA2B594EEB0035ADE5 /* GetExchangeRateInformationUsecaseTests.swift in Sources */,
 				A5E8D2F72B57E46400F2E7BD /* DateWorkTests.swift in Sources */,
