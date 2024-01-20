@@ -17,6 +17,7 @@
 		A59A9DF22B5A4E830035ADE5 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A59A9DF12B5A4E830035ADE5 /* Secrets.xcconfig */; };
 		A59A9DF52B5A4F740035ADE5 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9DF42B5A4F740035ADE5 /* Secrets.swift */; };
 		A59A9DF72B5A5D690035ADE5 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9DF62B5A5D690035ADE5 /* MockURLProtocol.swift */; };
+		A59A9E082B5B91CB0035ADE5 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9E072B5B91CB0035ADE5 /* Requestable.swift */; };
 		A5E8D2BD2B57C51F00F2E7BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2BC2B57C51F00F2E7BD /* AppDelegate.swift */; };
 		A5E8D2BF2B57C51F00F2E7BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2BE2B57C51F00F2E7BD /* SceneDelegate.swift */; };
 		A5E8D2C12B57C51F00F2E7BD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2C02B57C51F00F2E7BD /* MainViewController.swift */; };
@@ -58,6 +59,7 @@
 		A59A9DF12B5A4E830035ADE5 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		A59A9DF42B5A4F740035ADE5 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		A59A9DF62B5A5D690035ADE5 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		A59A9E072B5B91CB0035ADE5 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		A5E8D2B92B57C51F00F2E7BD /* ExchangeRateCalcApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRateCalcApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E8D2BC2B57C51F00F2E7BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5E8D2BE2B57C51F00F2E7BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +174,14 @@
 			path = NetworkTests;
 			sourceTree = "<group>";
 		};
+		A59A9E062B5B91870035ADE5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A59A9E072B5B91CB0035ADE5 /* Requestable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		A5E8D2B02B57C51F00F2E7BD = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +281,7 @@
 		A5E8D2FB2B591CFA00F2E7BD /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A59A9E062B5B91870035ADE5 /* Protocol */,
 				A59A9DEB2B5A40190035ADE5 /* Service */,
 				A59A9DD62B593F4B0035ADE5 /* Base */,
 			);
@@ -463,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A59A9DDB2B5940E00035ADE5 /* ExchangeRateinformationRepositoryInterface.swift in Sources */,
+				A59A9E082B5B91CB0035ADE5 /* Requestable.swift in Sources */,
 				A59A9DF52B5A4F740035ADE5 /* Secrets.swift in Sources */,
 				A59A9DD22B592C030035ADE5 /* ExchangeRateInformationDTO.swift in Sources */,
 				A59A9DD52B593EA50035ADE5 /* GetExchangeRateInformationUsecase.swift in Sources */,
