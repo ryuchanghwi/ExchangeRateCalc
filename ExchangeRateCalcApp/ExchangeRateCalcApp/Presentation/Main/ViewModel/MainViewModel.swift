@@ -8,11 +8,10 @@
 import Foundation
 import Combine
 
-enum CountryCase: String {
+enum CountryCase: String, CaseIterable {
     case korea = "USDKRW"
     case japen = "USDJPY"
     case philippines = "USDPHP"
-    
     func getCountryTitle() -> String {
         switch self {
         case .korea:
@@ -36,7 +35,7 @@ final class MainViewModel: ObservableObject {
     @Published var transferTitleAmount: String = ""
     @Published var outputAmount: String = "수취금액은 0 KRW 입니다"
     @Published var exchnageRate: String = ""
-    
+    // MARK: - In ViewController
     func getData() {
         getExchangeRateInformationUsecase.execute()
             .sink { completion in
@@ -54,9 +53,8 @@ final class MainViewModel: ObservableObject {
     }
     func combineData() {
         Publishers.CombineLatest($countryCase, $transferTitleAmount)
-            .sink { [weak self]country, amount in
+            .sink { [weak self] country, amount in
                 guard let self = self else { return }
-                print(country, amount, "????")
                 self.calcResultAmount(country: country, amount: amount)
             }
             .store(in: &cancellables)
@@ -67,6 +65,7 @@ final class MainViewModel: ObservableObject {
     func inputTransferAmount(amount: String) {
         transferTitleAmount = amount
     }
+    // MARK: - In ViewModel
     private func calcResultAmount(country: CountryCase, amount: String) {
         switch country {
         case .korea:

@@ -11,8 +11,7 @@ import Combine
 class MainViewController: UIViewController {
     // MARK: - Property
     private let viewModel = MainViewModel(getExchangeRateInformationUsecase: GetExchangeRateInformationUsecase(exchangeRateInformationRepository: ExchangeRateinformationRepository(service: GetService.shared)))
-    private var  cancellables: Set<AnyCancellable> = []
-    private let nationArray = ["한국(KRW)", "일본(JPY)", "필리핀(PHP)"]
+    private var cancellables: Set<AnyCancellable> = []
     // MARK: - UI Property
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -139,6 +138,7 @@ class MainViewController: UIViewController {
         setLayout()
         setConfig()
         setDelegate()
+        actions()
         viewModel.getData()
         viewModel.combineData()
         setBinding()
@@ -175,13 +175,14 @@ class MainViewController: UIViewController {
                 self.exchangeRateTitleLabel.text = data
             }
             .store(in: &cancellables)
+    }
+    // MARK: - Action Helper
+    private func actions() {
         self.transferTitleAmountTextField.addTarget(self, action: #selector(self.textFieldDidChange), for: .editingChanged)
     }
+    // MARK: - @objc Methods
     @objc func textFieldDidChange() {
         viewModel.inputTransferAmount(amount: transferTitleAmountTextField.text ?? "")
-    }
-    private func setBind(data: ExchangeRateInformationDTO) {
-        print(data, "????????")
     }
 }
 // MARK: - Extensions
@@ -190,10 +191,12 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         return 1
     }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return nationArray.count
+        return CountryCase.allCases.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return nationArray[row]
+        let countryCases = CountryCase.allCases
+        let selectedCountry = countryCases[row]
+        return selectedCountry.getCountryTitle()
     }
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 70
@@ -216,7 +219,6 @@ extension MainViewController: UITextFieldDelegate {
         addToolBar()
     }
 }
-
 extension MainViewController {
     // MARK: - Custom Method
     private func addToolBar() {
