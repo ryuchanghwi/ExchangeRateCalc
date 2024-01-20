@@ -16,7 +16,6 @@
 		A59A9DED2B5A403F0035ADE5 /* GetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9DEC2B5A403F0035ADE5 /* GetService.swift */; };
 		A59A9DF22B5A4E830035ADE5 /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A59A9DF12B5A4E830035ADE5 /* Secrets.xcconfig */; };
 		A59A9DF52B5A4F740035ADE5 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9DF42B5A4F740035ADE5 /* Secrets.swift */; };
-		A59A9DF72B5A5D690035ADE5 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9DF62B5A5D690035ADE5 /* MockURLProtocol.swift */; };
 		A59A9E082B5B91CB0035ADE5 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9E072B5B91CB0035ADE5 /* Requestable.swift */; };
 		A59A9E0C2B5BA3300035ADE5 /* ExchangeRateInformationSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9E0B2B5BA3300035ADE5 /* ExchangeRateInformationSession.swift */; };
 		A5E8D2BD2B57C51F00F2E7BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E8D2BC2B57C51F00F2E7BD /* AppDelegate.swift */; };
@@ -59,7 +58,6 @@
 		A59A9DEC2B5A403F0035ADE5 /* GetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetService.swift; sourceTree = "<group>"; };
 		A59A9DF12B5A4E830035ADE5 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		A59A9DF42B5A4F740035ADE5 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
-		A59A9DF62B5A5D690035ADE5 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		A59A9E072B5B91CB0035ADE5 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		A59A9E0B2B5BA3300035ADE5 /* ExchangeRateInformationSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateInformationSession.swift; sourceTree = "<group>"; };
 		A5E8D2B92B57C51F00F2E7BD /* ExchangeRateCalcApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRateCalcApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				A59A9DD72B593F8A0035ADE5 /* ErrorTypes.swift */,
-				A59A9DF62B5A5D690035ADE5 /* MockURLProtocol.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -492,7 +489,6 @@
 				A59A9DD82B593F8A0035ADE5 /* ErrorTypes.swift in Sources */,
 				A5E8D2F52B57E42200F2E7BD /* DateWork.swift in Sources */,
 				A5E8D2C12B57C51F00F2E7BD /* MainViewController.swift in Sources */,
-				A59A9DF72B5A5D690035ADE5 /* MockURLProtocol.swift in Sources */,
 				A5E8D2EE2B57CB9A00F2E7BD /* NumberWork.swift in Sources */,
 				A59A9DE72B594D290035ADE5 /* ExchangeRateInformationConstants.swift in Sources */,
 				A5E8D2BD2B57C51F00F2E7BD /* AppDelegate.swift in Sources */,
