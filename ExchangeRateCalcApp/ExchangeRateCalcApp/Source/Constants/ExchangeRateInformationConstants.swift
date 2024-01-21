@@ -8,13 +8,13 @@
 import Foundation
 
 struct ExchangeRateInformationConstants {
-    static let dummyData = ExchangeRateInformationDTO(success: true, terms: "https://currencylayer.com/terms", privacy: "https://currencylayer.com/privacy", timestamp: 1705660383, source: "USD", quotes: Quotes(koreaExChangeRate: 1333.794975, japenExChangeRate: 147.988972, philippinesChangeRate: 56.029499))
+    static let dummyData = ExchangeRateInformationDTO(success: true, terms: "https://currencylayer.com/terms", privacy: "https://currencylayer.com/privacy", timestamp: 1705847342, source: "USD", quotes: Quotes(koreaExChangeRate: 1333.794975, japenExChangeRate: 147.988972, philippinesChangeRate: 56.029499))
     static let jsonString = """
 {
     "success": true,
     "terms": "https://currencylayer.com/terms",
     "privacy": "https://currencylayer.com/privacy",
-    "timestamp": 1705660383,
+    "timestamp": 1705847342,
     "source": "USD",
     "quotes": {
         "USDAED": 3.672899,
