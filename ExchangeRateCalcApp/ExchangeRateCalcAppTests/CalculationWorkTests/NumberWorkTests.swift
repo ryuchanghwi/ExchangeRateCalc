@@ -56,4 +56,34 @@ final class NumberWorkTests: XCTestCase {
         // Then
         XCTAssertEqual(returnValue, expectedValue)
     }
+    func test_checkReceptionAmountState_0보다작을때_false가반환되는지확인() {
+        // Given
+        let value: Double = -1.0
+        // When
+        let returnValue = NumberWork.checkReceptionAmountState(amount: value)
+        // Then
+        XCTAssertFalse(returnValue)
+    }
+    func test_checkReceptionAmountState_0이상10000이하일때_true가반환되는지확인() {
+        // Given
+        let value: Double = 500
+        let secondValue: Double = 10000
+        let thirdValue: Double = 0
+        // When
+        let returnValue = NumberWork.checkReceptionAmountState(amount: value)
+        let secondReturnValue = NumberWork.checkReceptionAmountState(amount: secondValue)
+        let thirdReturnValue = NumberWork.checkReceptionAmountState(amount: thirdValue)
+        // Then
+        XCTAssertTrue(returnValue)
+        XCTAssertTrue(secondReturnValue)
+        XCTAssertTrue(thirdReturnValue)
+    }
+    func test_checkReceptionAmountState_10000보다클때_false가반환되는지확인() {
+        // Given
+        let value: Double = 10000.1
+        // When
+        let returnValue = NumberWork.checkReceptionAmountState(amount: value)
+        // Then
+        XCTAssertFalse(returnValue)
+    }
 }
