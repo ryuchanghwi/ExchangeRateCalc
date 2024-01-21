@@ -32,4 +32,23 @@ struct DateWork {
             return returnValue
         }
     }
+    static func timestampToString(timeStamp: TimeInterval, types: DateConvertTypes) -> String {
+        let date = Date(timeIntervalSince1970: timeStamp)
+        let dateFormatter = DateFormatter()
+        var returnValue = ""
+        switch types {
+        case .yyyyMMddHHmm:
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+            returnValue = dateFormatter.string(from: date)
+            return returnValue
+        case .yyyyMMdd:
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            returnValue = dateFormatter.string(from: date)
+            return returnValue
+        case .MMdd:
+            dateFormatter.dateFormat = "MM-dd"
+            returnValue = dateFormatter.string(from: date)
+            return returnValue
+        }
+    }
 }

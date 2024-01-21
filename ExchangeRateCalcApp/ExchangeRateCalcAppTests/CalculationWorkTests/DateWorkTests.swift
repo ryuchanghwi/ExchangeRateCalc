@@ -9,7 +9,7 @@ import XCTest
 @testable import ExchangeRateCalcApp
 
 final class DateWorkTests: XCTestCase {
-    func test_데이트값이들어왔을때_yyyyMMddHHmm형식으로반환되는지확인() {
+    func test_convertToString_데이트값이들어왔을때_yyyyMMddHHmm형식으로반환되는지확인() {
         // Given
         let expectedValue = "2022-01-17 15:30"
         let dateFormatter = DateFormatter()
@@ -20,7 +20,7 @@ final class DateWorkTests: XCTestCase {
         // Then
         XCTAssertEqual(expectedValue, returnValue)
     }
-    func test_데이트값이들어왔을때_yyyyMMdd형식으로반환되는지확인() {
+    func test_convertToString_데이트값이들어왔을때_yyyyMMdd형식으로반환되는지확인() {
         // Given
         let expectedValue = "2022-01-17"
         let dateFormatter = DateFormatter()
@@ -31,7 +31,7 @@ final class DateWorkTests: XCTestCase {
         // Then
         XCTAssertEqual(expectedValue, returnValue)
     }
-    func test_데이트값이들어왔을때_MMdd형식으로반환되는지확인() {
+    func test_convertToString_데이트값이들어왔을때_MMdd형식으로반환되는지확인() {
         // Given
         let expectedValue = "01-17"
         let dateFormatter = DateFormatter()
@@ -39,6 +39,33 @@ final class DateWorkTests: XCTestCase {
         let value = dateFormatter.date(from: expectedValue)!
         // When
         let returnValue = DateWork.convertToString(value, types: .MMdd)
+        // Then
+        XCTAssertEqual(expectedValue, returnValue)
+    }
+    func test_timestampToString_데이트값이들어왔을때_yyyyMMddHHmm형식으로반환되는지확인() {
+        // Given
+        let value: Double = ExchangeRateInformationConstants.dummyData.timestamp!
+        let expectedValue = "2024-01-21 23:29"
+        // When
+        let returnValue = DateWork.timestampToString(timeStamp: value, types: .yyyyMMddHHmm)
+        // Then
+        XCTAssertEqual(expectedValue, returnValue)
+    }
+    func test_timestampToString_데이트값이들어왔을때_yyyyMMdd형식으로반환되는지확인() {
+        // Given
+        let value: Double = ExchangeRateInformationConstants.dummyData.timestamp!
+        let expectedValue = "2024-01-21"
+        // When
+        let returnValue = DateWork.timestampToString(timeStamp: value, types: .yyyyMMdd)
+        // Then
+        XCTAssertEqual(expectedValue, returnValue)
+    }
+    func test_timestampToString_데이트값이들어왔을때_MMdd형식으로반환되는지확인() {
+        // Given
+        let value: Double = ExchangeRateInformationConstants.dummyData.timestamp!
+        let expectedValue = "01-21"
+        // When
+        let returnValue = DateWork.timestampToString(timeStamp: value, types: .MMdd)
         // Then
         XCTAssertEqual(expectedValue, returnValue)
     }
