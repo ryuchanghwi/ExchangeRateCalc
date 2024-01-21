@@ -17,7 +17,7 @@ struct MainItemViewData {
     let exchangeRateInformationData: ExchangeRateInformationDTO
     init(exchangeRateInformationData: ExchangeRateInformationDTO) {
         self.exchangeRateInformationData = exchangeRateInformationData
-        self.viewTime = "\(exchangeRateInformationData.timestamp ?? 0)"
+        self.viewTime = DateWork.timestampToString(timeStamp: exchangeRateInformationData.timestamp ?? 0, types: .yyyyMMddHHmm)
         self.result = "수취금액은 0 KRW 입니다"
         self.exchangeRate = "\(NumberWork.addComma(NumberWork.truncateDecimal(exchangeRateInformationData.quotes.koreaExChangeRate ?? 0, point: 2))) KRW / USD"
         self.krwRate = exchangeRateInformationData.quotes.koreaExChangeRate ?? 0
