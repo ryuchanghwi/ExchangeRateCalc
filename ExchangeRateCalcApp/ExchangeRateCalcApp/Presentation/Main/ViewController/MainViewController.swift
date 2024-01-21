@@ -180,6 +180,13 @@ class MainViewController: UIViewController {
     private func actions() {
         self.transferTitleAmountTextField.addTarget(self, action: #selector(self.textFieldDidChange), for: .editingChanged)
     }
+    private func showAlert() {
+        let alert = UIAlertController(title: "알림", message: "송금액이 바르지 않습니다.", preferredStyle: .alert)
+        self.present(alert, animated: true)
+        Timer.scheduledTimer(withTimeInterval: 2.5, repeats: false) { _ in
+            alert.dismiss(animated: true)
+        }
+    }
     // MARK: - @objc Methods
     @objc func textFieldDidChange() {
         viewModel.inputTransferAmount(amount: transferTitleAmountTextField.text ?? "")
