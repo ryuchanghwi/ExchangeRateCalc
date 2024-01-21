@@ -10,7 +10,7 @@ import Combine
 
 class MainViewController: UIViewController {
     // MARK: - Property
-    private let viewModel = MainViewModel(getExchangeRateInformationUsecase: GetExchangeRateInformationUsecase(exchangeRateInformationRepository: ExchangeRateinformationRepository(service: GetService.shared)))
+    private let viewModel = MainViewModel(getExchangeRateInformationUsecase: GetExchangeRateInformationUsecase(exchangeRateInformationRepository: ExchangeRateinformationRepository(service: GetService(session: MockSession()))))
     private var cancellables: Set<AnyCancellable> = []
     // MARK: - UI Property
     private let titleLabel: UILabel = {
@@ -175,6 +175,15 @@ class MainViewController: UIViewController {
                 self.exchangeRateTitleLabel.text = data
             }
             .store(in: &cancellables)
+        viewModel.$receptionAmountState
+            .receive(on: RunLoop.main)
+            .sink { [weak self] data in
+                guard let self = self else { return }
+                if data == false {
+                    showAlert()
+                }
+            }
+            .store(in: &cancellables)
     }
     // MARK: - Action Helper
     private func actions() {
@@ -183,6 +192,7 @@ class MainViewController: UIViewController {
     private func showAlert() {
         let alert = UIAlertController(title: "알림", message: "송금액이 바르지 않습니다.", preferredStyle: .alert)
         self.present(alert, animated: true)
+        self.resetTextField()
         Timer.scheduledTimer(withTimeInterval: 2.5, repeats: false) { _ in
             alert.dismiss(animated: true)
         }
@@ -228,6 +238,9 @@ extension MainViewController: UITextFieldDelegate {
 }
 extension MainViewController {
     // MARK: - Custom Method
+    private func resetTextField() {
+        transferTitleAmountTextField.text = ""
+    }
     private func addToolBar() {
         let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 44))
         toolBar.sizeToFit()
