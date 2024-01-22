@@ -229,9 +229,17 @@
 		A5CB6B762B5E3A5500515A39 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
-				A5CB6B772B5E3ABF00515A39 /* MainLabel.swift */,
+				A5CB6B792B5E3B4200515A39 /* Components */,
 			);
 			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		A5CB6B792B5E3B4200515A39 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A5CB6B772B5E3ABF00515A39 /* MainLabel.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		A5E8D2B02B57C51F00F2E7BD = {
