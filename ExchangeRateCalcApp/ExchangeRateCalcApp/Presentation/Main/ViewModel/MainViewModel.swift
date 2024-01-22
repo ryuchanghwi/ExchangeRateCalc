@@ -34,7 +34,7 @@ final class MainViewModel: ObservableObject {
     @Published var receptionCountry: String = CountryCase.korea.getCountryTitle()
     @Published var transferTitleAmount: String = ""
     @Published var outputAmount: String = ""
-    @Published var exchanteRate: String = ""
+    @Published var exchangeRate: String = ""
     @Published var receptionAmountState: Bool = true
     // MARK: - In ViewController
     func getData() {
@@ -78,15 +78,15 @@ final class MainViewModel: ObservableObject {
         case .korea:
             receptionCountry = getReceptionCountry(country: .korea)
             outputAmount = getResultAmount(exchangeRate: exchangeRateInformationData?.krwRate ?? 0, country: .korea, amount: amount)
-            exchanteRate = getExchangeRate(exchangeRate: exchangeRateInformationData?.krwRate ?? 0, country: .korea)
+            exchangeRate = getExchangeRate(exchangeRate: exchangeRateInformationData?.krwRate ?? 0, country: .korea)
         case .japen:
             receptionCountry = getReceptionCountry(country: .japen)
             outputAmount = getResultAmount(exchangeRate: exchangeRateInformationData?.jpyRate ?? 0, country: .japen, amount: amount)
-            exchanteRate = getExchangeRate(exchangeRate: exchangeRateInformationData?.jpyRate ?? 0, country: .japen)
+            exchangeRate = getExchangeRate(exchangeRate: exchangeRateInformationData?.jpyRate ?? 0, country: .japen)
         case .philippines:
             receptionCountry = getReceptionCountry(country: .philippines)
             outputAmount = getResultAmount(exchangeRate: exchangeRateInformationData?.jpyRate ?? 0, country: .philippines, amount: amount)
-            exchanteRate = getExchangeRate(exchangeRate: exchangeRateInformationData?.phpRate ?? 0, country: .philippines)
+            exchangeRate = getExchangeRate(exchangeRate: exchangeRateInformationData?.phpRate ?? 0, country: .philippines)
         }
     }
     private func resetOutputAmount() {

@@ -70,7 +70,6 @@ class MainViewController: UIViewController {
                 guard let self = self else { return }
                 self.viewTimeTitleLabel.text = data?.viewTime
                 self.exchangeRateTitleLabel.text = data?.exchangeRate
-                self.resultLabel.text = data?.result
             }
             .store(in: &cancellables)
         viewModel.$receptionCountry
@@ -87,7 +86,7 @@ class MainViewController: UIViewController {
                 self.resultLabel.text = data
             }
             .store(in: &cancellables)
-        viewModel.$exchanteRate
+        viewModel.$exchangeRate
             .receive(on: RunLoop.main)
             .sink { [weak self] data in
                 guard let self = self else { return }
