@@ -33,8 +33,8 @@ final class MainViewModel: ObservableObject {
     @Published var countryCase: CountryCase = .korea
     @Published var receptionCountry: String = CountryCase.korea.getCountryTitle()
     @Published var transferTitleAmount: String = ""
-    @Published var outputAmount: String = "수취금액은 0 KRW 입니다"
-    @Published var exchnageRate: String = ""
+    @Published var outputAmount: String = ""
+    @Published var exchanteRate: String = ""
     @Published var receptionAmountState: Bool = true
     // MARK: - In ViewController
     func getData() {
@@ -57,8 +57,9 @@ final class MainViewModel: ObservableObject {
             .sink { [weak self] country, amount in
                 guard let self = self else { return }
                 if showAlertState(amount: Double(amount) ?? 0) {
-                    receptionStateToFalse()
+                    resetReceptionState()
                     resetOutputAmount()
+                    resetTransferTitleAmount()
                 } else {
                     self.calcResultAmount(country: country, amount: amount)
                 }
@@ -77,21 +78,24 @@ final class MainViewModel: ObservableObject {
         case .korea:
             receptionCountry = getReceptionCountry(country: .korea)
             outputAmount = getResultAmount(exchangeRate: exchangeRateInformationData?.krwRate ?? 0, country: .korea, amount: amount)
-            exchnageRate = getExchangeRate(exchangeRate: exchangeRateInformationData?.krwRate ?? 0, country: .korea)
+            exchanteRate = getExchangeRate(exchangeRate: exchangeRateInformationData?.krwRate ?? 0, country: .korea)
         case .japen:
             receptionCountry = getReceptionCountry(country: .japen)
             outputAmount = getResultAmount(exchangeRate: exchangeRateInformationData?.jpyRate ?? 0, country: .japen, amount: amount)
-            exchnageRate = getExchangeRate(exchangeRate: exchangeRateInformationData?.jpyRate ?? 0, country: .japen)
+            exchanteRate = getExchangeRate(exchangeRate: exchangeRateInformationData?.jpyRate ?? 0, country: .japen)
         case .philippines:
             receptionCountry = getReceptionCountry(country: .philippines)
             outputAmount = getResultAmount(exchangeRate: exchangeRateInformationData?.jpyRate ?? 0, country: .philippines, amount: amount)
-            exchnageRate = getExchangeRate(exchangeRate: exchangeRateInformationData?.phpRate ?? 0, country: .philippines)
+            exchanteRate = getExchangeRate(exchangeRate: exchangeRateInformationData?.phpRate ?? 0, country: .philippines)
         }
     }
     private func resetOutputAmount() {
         outputAmount = ""
     }
-    private func receptionStateToFalse() {
+    private func resetTransferTitleAmount() {
+        transferTitleAmount = ""
+    }
+    private func resetReceptionState() {
         receptionAmountState = false
     }
     private func showAlertState(amount: Double) -> Bool {

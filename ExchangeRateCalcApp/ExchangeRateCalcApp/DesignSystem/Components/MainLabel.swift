@@ -11,6 +11,7 @@ import UIKit
 enum MainLabelTypes {
     case title(text: String)
     case content(text: String)
+    case result(text: String)
 }
 
 final class MainLabel: UILabel {
@@ -33,6 +34,10 @@ final class MainLabel: UILabel {
         case .content(let text):
             textColor = .black
             font = .systemFont(ofSize: 16)
+            self.text = text
+        case .result(text: let text):
+            textColor = .black
+            font = .systemFont(ofSize: 20)
             self.text = text
         }
     }
