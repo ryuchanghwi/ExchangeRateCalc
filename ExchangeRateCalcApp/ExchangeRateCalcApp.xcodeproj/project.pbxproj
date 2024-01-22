@@ -224,6 +224,13 @@
 			path = ItemViewData;
 			sourceTree = "<group>";
 		};
+		A5CB6B762B5E3A5500515A39 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
 		A5E8D2B02B57C51F00F2E7BD = {
 			isa = PBXGroup;
 			children = (
@@ -247,13 +254,14 @@
 		A5E8D2BB2B57C51F00F2E7BD /* ExchangeRateCalcApp */ = {
 			isa = PBXGroup;
 			children = (
-				A5E8D2FD2B591E8400F2E7BD /* Source */,
-				A5E8D2FC2B591D2000F2E7BD /* Resource */,
+				A5CB6B762B5E3A5500515A39 /* DesignSystem */,
+				A5E8D2F82B591CC500F2E7BD /* Presentation */,
 				A5E8D2FB2B591CFA00F2E7BD /* Network */,
 				A5E8D2FA2B591CD600F2E7BD /* Data */,
 				A5E8D2F92B591CD000F2E7BD /* Domain */,
-				A5E8D2F82B591CC500F2E7BD /* Presentation */,
 				A5E8D2EC2B57CABE00F2E7BD /* CalculationWork */,
+				A5E8D2FD2B591E8400F2E7BD /* Source */,
+				A5E8D2FC2B591D2000F2E7BD /* Resource */,
 			);
 			path = ExchangeRateCalcApp;
 			sourceTree = "<group>";
