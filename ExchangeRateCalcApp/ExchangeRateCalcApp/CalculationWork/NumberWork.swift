@@ -18,7 +18,7 @@ struct NumberWork {
     static func addComma(_ value: Double) -> String {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
-        return numberFormatter.string(from: NSNumber(value: value)) ?? ""
+        return numberFormatter.string(from: NSNumber(value: value))!
     }
     static func checkReceptionAmountState(amount: Double) -> Bool {
         var returnValue: Bool = true
