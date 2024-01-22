@@ -10,7 +10,7 @@ import Combine
 
 class MainViewController: UIViewController {
     // MARK: - Property
-    private let viewModel = MainViewModel(getExchangeRateInformationUsecase: GetExchangeRateInformationUsecase(exchangeRateInformationRepository: ExchangeRateinformationRepository(service: GetService(session: MockSession()))))
+    private let viewModel = MainViewModel(getExchangeRateInformationUsecase: GetExchangeRateInformationUsecase(exchangeRateInformationRepository: ExchangeRateinformationRepository(service: GetService.shared)))
     private var cancellables: Set<AnyCancellable> = []
     // MARK: - UI Property
     private let titleLabel: UILabel = MainLabel(types: .title(text: "환율 계산"))
