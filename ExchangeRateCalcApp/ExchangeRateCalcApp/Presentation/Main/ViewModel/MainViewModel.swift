@@ -35,6 +35,7 @@ final class MainViewModel: ObservableObject {
     @Published var transferTitleAmount: String = ""
     @Published var outputAmount: String = "수취금액은 0 KRW 입니다"
     @Published var exchnageRate: String = ""
+    @Published var receptionAmountState: Bool = true
     // MARK: - In ViewController
     func getData() {
         getExchangeRateInformationUsecase.execute()
@@ -55,7 +56,12 @@ final class MainViewModel: ObservableObject {
         Publishers.CombineLatest($countryCase, $transferTitleAmount)
             .sink { [weak self] country, amount in
                 guard let self = self else { return }
-                self.calcResultAmount(country: country, amount: amount)
+                if showAlertState(amount: Double(amount) ?? 0) {
+                    receptionStateToFalse()
+                    resetOutputAmount()
+                } else {
+                    self.calcResultAmount(country: country, amount: amount)
+                }
             }
             .store(in: &cancellables)
     }
@@ -81,6 +87,15 @@ final class MainViewModel: ObservableObject {
             outputAmount = getResultAmount(exchangeRate: exchangeRateInformationData?.jpyRate ?? 0, country: .philippines, amount: amount)
             exchnageRate = getExchangeRate(exchangeRate: exchangeRateInformationData?.phpRate ?? 0, country: .philippines)
         }
+    }
+    private func resetOutputAmount() {
+        outputAmount = ""
+    }
+    private func receptionStateToFalse() {
+        receptionAmountState = false
+    }
+    private func showAlertState(amount: Double) -> Bool {
+        return !NumberWork.checkReceptionAmountState(amount: amount)
     }
     private func getReceptionCountry(country: CountryCase) -> String {
         return country.getCountryTitle()
