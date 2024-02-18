@@ -23,6 +23,8 @@
 		A59A9E142B5BBC1A0035ADE5 /* ExchangeRateinformationRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9E132B5BBC1A0035ADE5 /* ExchangeRateinformationRepositoryTests.swift */; };
 		A59A9E162B5BC3D60035ADE5 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9E152B5BC3D60035ADE5 /* MainViewModel.swift */; };
 		A59A9E192B5BD0820035ADE5 /* MainItemViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59A9E182B5BD0820035ADE5 /* MainItemViewData.swift */; };
+		A5A78FE22B6971090061EA97 /* GetServiceCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A78FE12B6971090061EA97 /* GetServiceCombine.swift */; };
+		A5A78FE42B6973840061EA97 /* GetServiceCombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A78FE32B6973840061EA97 /* GetServiceCombineTests.swift */; };
 		A5CB6B782B5E3ABF00515A39 /* MainLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CB6B772B5E3ABF00515A39 /* MainLabel.swift */; };
 		A5CB6B7C2B5E5D4000515A39 /* MainItemViewDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CB6B7B2B5E5D4000515A39 /* MainItemViewDataTests.swift */; };
 		A5CB6B7F2B5E999700515A39 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CB6B7E2B5E999700515A39 /* MainViewModelTests.swift */; };
@@ -73,6 +75,8 @@
 		A59A9E132B5BBC1A0035ADE5 /* ExchangeRateinformationRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateinformationRepositoryTests.swift; sourceTree = "<group>"; };
 		A59A9E152B5BC3D60035ADE5 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		A59A9E182B5BD0820035ADE5 /* MainItemViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItemViewData.swift; sourceTree = "<group>"; };
+		A5A78FE12B6971090061EA97 /* GetServiceCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetServiceCombine.swift; sourceTree = "<group>"; };
+		A5A78FE32B6973840061EA97 /* GetServiceCombineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetServiceCombineTests.swift; sourceTree = "<group>"; };
 		A5CB6B772B5E3ABF00515A39 /* MainLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLabel.swift; sourceTree = "<group>"; };
 		A5CB6B7B2B5E5D4000515A39 /* MainItemViewDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItemViewDataTests.swift; sourceTree = "<group>"; };
 		A5CB6B7E2B5E999700515A39 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				A59A9DEC2B5A403F0035ADE5 /* GetService.swift */,
+				A5A78FE12B6971090061EA97 /* GetServiceCombine.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				A59A9E0D2B5BA49A0035ADE5 /* ExchangeRateInformationGetServiceTests.swift */,
+				A5A78FE32B6973840061EA97 /* GetServiceCombineTests.swift */,
 			);
 			path = NetworkTests;
 			sourceTree = "<group>";
@@ -579,6 +585,7 @@
 				A5CB6B782B5E3ABF00515A39 /* MainLabel.swift in Sources */,
 				A59A9E0C2B5BA3300035ADE5 /* ExchangeRateInformationSession.swift in Sources */,
 				A59A9E162B5BC3D60035ADE5 /* MainViewModel.swift in Sources */,
+				A5A78FE22B6971090061EA97 /* GetServiceCombine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +593,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A78FE42B6973840061EA97 /* GetServiceCombineTests.swift in Sources */,
 				A5CB6B7C2B5E5D4000515A39 /* MainItemViewDataTests.swift in Sources */,
 				A59A9E0E2B5BA49A0035ADE5 /* ExchangeRateInformationGetServiceTests.swift in Sources */,
 				A59A9E142B5BBC1A0035ADE5 /* ExchangeRateinformationRepositoryTests.swift in Sources */,

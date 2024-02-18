@@ -10,7 +10,7 @@ import Combine
 @testable import ExchangeRateCalcApp
 
 struct MockExchangeRateinformationRepository: ExchangeRateinformationRepositoryInterface {
-    let hasError: Bool
+    private let hasError: Bool
     init(hasError: Bool) {
         self.hasError = hasError
     }

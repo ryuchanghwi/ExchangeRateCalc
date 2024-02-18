@@ -52,3 +52,41 @@ struct DateWork {
         }
     }
 }
+struct DateWork2 {
+    private static let dateFormatter = DateFormatter()
+    func convertToString(_ date: Date, types: DateConvertTypes) -> String {
+        var returnValue = ""
+        switch types {
+        case .yyyyMMddHHmm:
+            DateWork2.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+            returnValue = DateWork2.dateFormatter.string(from: date)
+            return returnValue
+        case .yyyyMMdd:
+            DateWork2.dateFormatter.dateFormat = "yyyy-MM-dd"
+            returnValue = DateWork2.dateFormatter.string(from: date)
+            return returnValue
+        case .MMdd:
+            DateWork2.dateFormatter.dateFormat = "MM-dd"
+            returnValue = DateWork2.dateFormatter.string(from: date)
+            return returnValue
+        }
+    }
+    func timestampToString(timeStamp: TimeInterval, types: DateConvertTypes) -> String {
+        let date = Date(timeIntervalSince1970: timeStamp)
+        var returnValue = ""
+        switch types {
+        case .yyyyMMddHHmm:
+            DateWork2.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+            returnValue = DateWork2.dateFormatter.string(from: date)
+            return returnValue
+        case .yyyyMMdd:
+            DateWork2.dateFormatter.dateFormat = "yyyy-MM-dd"
+            returnValue = DateWork2.dateFormatter.string(from: date)
+            return returnValue
+        case .MMdd:
+            DateWork2.dateFormatter.dateFormat = "MM-dd"
+            returnValue = DateWork2.dateFormatter.string(from: date)
+            return returnValue
+        }
+    }
+}

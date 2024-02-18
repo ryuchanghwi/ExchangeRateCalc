@@ -6,7 +6,9 @@
 //
 
 import Foundation
-
+/*
+ 데이터를 처음 호출할 때 뷰에 맞게끔 가공하기 위한 역할을 위해 만들었다. 
+ */
 struct MainItemViewData {
     let viewTime: String
     let exchangeRate: String

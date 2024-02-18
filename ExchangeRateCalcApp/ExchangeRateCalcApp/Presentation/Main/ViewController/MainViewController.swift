@@ -7,6 +7,11 @@
 
 import UIKit
 import Combine
+/*
+ autoresizing - 부모 뷰가 커지거나 줄어듦에 따라 서브 뷰의 크기나 위치를 조정하는 방식을 결정할 수 있음
+ autoresizingMask - supereview가 변함에 따라 subview의 크기를 어떻게 할 것인가이기 때문에 이와 동일한 기능을 하는 autolayout에서 같이 사용된다면 출돌날 수 있음
+ translatesAutoresizingMaskIntoConstraints - autoresizing을 사용하지 않는 것으로 명시적 선언, 스토리보드에 경우 자동으로 false  설정
+ */
 
 class MainViewController: UIViewController {
     // MARK: - Property
